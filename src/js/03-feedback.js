@@ -15,9 +15,11 @@ populateTextarea();
 function onFormSubmit(evt) {
     evt.preventDefault();
 
+    console.log(JSON.parse(localStorage.getItem(STORAGE_KEY)));
+
     evt.currentTarget.reset();
     localStorage.removeItem(STORAGE_KEY);
-    console.log(formData);
+    
  }
 
 function onTextareaInput(evt) {
